@@ -1,7 +1,6 @@
-import { AppHeader }
-  from "@/components/AppHeader";
-import { FeatureCard }
-  from "@/components/FeatureCard";
+import { AppHeader }from "@/components/AppHeader";
+import { FeatureCard }from "@/components/FeatureCard";
+import { DetectionPanel } from "@/components/DetectionPanel";
 export default function Home() {
   return (
     <main>
@@ -17,9 +16,8 @@ export default function Home() {
         description="สนทนากับ genetive AI"
       />
       <br></br>
-      <button>
-        Start Detection
-      </button>
+      
+      <DetectionPanel />
 
     </main>
   );
