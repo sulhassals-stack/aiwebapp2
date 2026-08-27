@@ -1,5 +1,8 @@
 "use client";
+import { useState } from "react";
 export function DetectionPanel() {
+    const [status, setStatus] = useState("Waiting");
+
     function handleClick() {
         alert(
             "Prepare object detection"
@@ -10,11 +13,13 @@ export function DetectionPanel() {
             <h2>
                 Object Detection
             </h2>
+            <p>
+                Status: {status}
+            </p>
+
             <button
-                onClick={() =>
-                    alert(
-                        "Prepare object detection"
-                    )
+                onClick={() => setStatus("Ready")
+
                 }
             >
                 Prepare Detection
