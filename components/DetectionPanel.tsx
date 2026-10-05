@@ -54,7 +54,7 @@ export function DetectionPanel() {
         try {
             setLoading(true);
             setError("");
-            const formData = new FormData();
+            const formData = new FormData();//สร้างฟรอมเพื่อที่จะส่งไปยังflask
             formData.append("image", selectedFile);
 
             const response = await fetch("http://127.0.0.1:5000/predict", {
@@ -67,7 +67,7 @@ export function DetectionPanel() {
             }
 
             const data = await response.json();
-            setDetections(data.detected_objects);
+            setDetections(data.detected_objects);//เอาข้อมูลdetected_objectsมาใส่ในdatacแล้วเก็บไว้ในsetDetections
         } catch (error) {
             setError("Cannot detect objects");
         } finally {
@@ -105,7 +105,7 @@ export function DetectionPanel() {
             {previewUrl && (
                 <div className="ux-preview">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={previewUrl} alt="Selected image preview" />
+                    <img src={previewUrl} alt="Selected image preview" /> {/*แสดงภาพ*/}
                 </div>
             )}
             <button

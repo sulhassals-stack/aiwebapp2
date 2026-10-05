@@ -8,7 +8,7 @@ export function FeatureCard({
 }: FeatureCardProps) {
     return (
         <section className="ux-card ux-feature">
-            <h2>{title}</h2>
+            <h2>{title}</h2> 
             <p className="ux-muted">
                 {description}
             </p>
