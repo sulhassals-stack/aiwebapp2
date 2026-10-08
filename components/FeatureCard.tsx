@@ -1,17 +1,14 @@
-type FeatureCardProps = {
-    title: string;
-    description: string;
-};
-export function FeatureCard({
-    title,
-    description
-}: FeatureCardProps) {
-    return (
-        <section className="ux-card ux-feature">
-            <h2>{title}</h2> 
-            <p className="ux-muted">
-                {description}
-            </p>
-        </section>
-    );
+interface FeatureCardProps {
+  title: string;
+  status: string;
+  isGlow?: boolean;
+}
+
+export default function FeatureCard({ title, status, isGlow }: FeatureCardProps) {
+  return (
+    <div className={`ux-card ${isGlow ? "ux-card-glow" : ""}`}>
+      <span className="ux-eyebrow">{title}</span>
+      <h2>{status}</h2>
+    </div>
+  );
 }

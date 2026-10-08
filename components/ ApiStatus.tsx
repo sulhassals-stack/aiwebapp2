@@ -25,21 +25,20 @@ export function ApiStatus() {
         }
     }
     return (
-        <section className="ux-card ux-status">
-            <div className="ux-section-heading">
-                <p className="ux-eyebrow">
-                    SYSTEM STATUS
-                </p>
-                <h2>Backend API</h2>
-                <p className="ux-muted">
-                    Check the connection to Flask.
-                </p>
-            </div>
-            <p>
-                API Status:
-                {" "}
-                <strong>{status}</strong>
-            </p>
+       <div className="ux-card">
+      <div className="ux-card-header-icon" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <span>🔌</span>
+        <h3 style={{ margin: 0 }}>Backend API</h3>
+      </div>
+      <p className="ux-muted" style={{ fontSize: "13px", margin: "6px 0 14px" }}>
+        ตรวจสอบสถานะการเชื่อมต่อเซิร์ฟเวอร์ AI
+      </p>
+
+      <div style={{ marginBottom: "16px" }}>
+        <span className={`ux-badge ${status === "Active" ? "ux-badge-green" : "ux-badge-orange"}`}>
+          ● {status}
+        </span>
+      </div>
             <button
                 type="button"
                 className="ux-button"
@@ -57,6 +56,6 @@ export function ApiStatus() {
                     {error}
                 </div>
             )}
-        </section>
+      </div>
     );
 }
