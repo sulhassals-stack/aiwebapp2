@@ -1,18 +1,14 @@
 "use client";
 import { useState } from "react";
 export function ApiStatus() {
-    const [status, setStatus] =
-        useState("Not checked");
-    const [loading, setLoading] =
-        useState(false);
-    const [error, setError] =
-        useState("");
+    const [status, setStatus] = useState("Not checked");
+    const [loading, setLoading] =useState(false);
+    const [error, setError] =useState("");
     async function checkApi() {
         try {
             setLoading(true);
             setError("");
-            const response = await fetch(
-                "http://127.0.0.1:5000/health");
+            const response = await fetch("http://127.0.0.1:5000/health");
             if (!response.ok) {
                 throw new Error("API request failed");
             }
@@ -45,9 +41,7 @@ export function ApiStatus() {
                 onClick={checkApi}
                 disabled={loading}
             >
-                {loading
-                    ? "Checking..."
-                    : "Check API"}
+                {loading ? "Checking...": "Check API"}
             </button>{error && (
                 <div
                     className="ux-error"

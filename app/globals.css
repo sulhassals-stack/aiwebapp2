@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
+  --background: #d5dadf;
   --foreground: #0f172a;
   
-  --ux-bg: #edf2f9;
-  --ux-surface: #ffffff;
+  --ux-bg: #417dcc;
+  --ux-surface: #3ba363;
   --ux-text: #0f172a;
   --ux-muted: #64748b;
   --ux-primary: #0284c7;
@@ -24,12 +24,12 @@ body {
 
 
 :root {
- --background: #1a1a1a;
+ --background: #0a0a0a;
  --foreground: #ffffff;
 }
 
 :root {
- --ux-background: #f3f7fc;
+ --ux-background: #176cd4;
  --ux-surface: #ffffff;
  --ux-text: #0f172a;
  --ux-muted: #64748b;
@@ -169,10 +169,10 @@ body {
  justify-content: center;
  min-height: 44px;
  padding: 10px 18px;
- border: 1px solid #bfdbfe;
+ border: 1px solid #a8caf3;
  border-radius: 12px;
  background: #eff6ff;
- color: #1d4ed8;
+ color: #0942df;
  font-size: 14px;
  font-weight: 700;
  cursor: pointer;

@@ -10,7 +10,7 @@ export default function Home() {
 
     <div className="ux-status-grid">
       {/* การ์ดสถานะการสแกน */}
-      <div className="ux-card">
+      <div className="ux-card ux-card-glow">
         <span className="ux-eyebrow">SCAN STATUS</span>
         <h2>เริ่มตรวจจับ...</h2>
       </div>
@@ -28,7 +28,7 @@ export default function Home() {
       </section>
 
       {/* การ์ดทางลัดไปหน้าประวัติบันทึกการบุกรุก */}
-      <section className="sp-home-card">
+      <section className="ux-card ux-card-glow">
         <div>
           <p className="sp-home-eyebrow">INTRUSION LOGS</p>
           <h2>บันทึกและประวัติการตรวจพบนก</h2>
